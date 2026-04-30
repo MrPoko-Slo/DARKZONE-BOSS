@@ -29,33 +29,44 @@ jobs:
         mv config.yml src/main/resources/
 
     - name: Create pom.xml
+      shell: python3 {0}
       run: |
-        cat > pom.xml << 'POMEOF'
-
-
-4.0.0
-com.darkzone
-DarkzoneBoss
-1.0.0
-jar
-
-papermchttps://repo.papermc.io/repository/maven-public/
-
-
-io.papermc.paperpaper-api1.21.1-R0.1-SNAPSHOTprovided
-
-
-
-org.apache.maven.pluginsmaven-compiler-plugin3.11.02121
-
-
-
-21
-21
-UTF-8
-
-
-POMEOF
+        pom = (
+          '\n'
+          '\n'
+          '4.0.0\n'
+          'com.darkzone\n'
+          'DarkzoneBoss\n'
+          '1.0.0\n'
+          'jar\n'
+          '\n'
+          'papermc'
+          'https://repo.papermc.io/repository/maven-public/'
+          '\n'
+          '\n'
+          '\n'
+          '\n'
+          'io.papermc.paper\n'
+          'paper-api\n'
+          '1.21.1-R0.1-SNAPSHOT\n'
+          'provided\n'
+          '\n'
+          '\n'
+          '\n'
+          'org.apache.maven.plugins\n'
+          'maven-compiler-plugin\n'
+          '3.11.0\n'
+          '2121\n'
+          '\n'
+          '\n'
+          '21\n'
+          '21\n'
+          'UTF-8\n'
+          '\n'
+          '\n'
+        )
+        with open("pom.xml", "w") as f:
+          f.write(pom)
 
     - name: Build with Maven
       run: mvn clean package
