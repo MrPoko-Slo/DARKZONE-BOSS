@@ -1,0 +1,17 @@
+# DarkzoneBoss Configuration
+
+# Boss health (normal warden has 500 HP)
+boss-health: 750.0
+
+# Boss attack damage (normal warden does 45 damage)
+boss-attack-damage: 20.0
+
+# Number of minions spawned at 50% health
+minion-count: 10
+
+# Minion health
+minion-health: 20.0
+
+# LootCrate crate name for the key drop
+# This is the name of your crate in the LootCrate plugin
+crate-name: mythic

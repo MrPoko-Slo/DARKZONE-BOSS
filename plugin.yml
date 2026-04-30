@@ -1,0 +1,17 @@
+name: DarkzoneBoss
+version: 1.0.0
+main: com.darkzone.boss.DarkzoneBossPlugin
+api-version: '1.21'
+description: Custom Darkzone Warden boss fight
+author: Custom
+
+commands:
+  spawnboss:
+    description: Spawn the Darkzone Warden boss
+    usage: /spawnboss [player]
+    permission: darkzoneboss.spawn
+
+permissions:
+  darkzoneboss.spawn:
+    description: Allows spawning the Darkzone Warden boss
+    default: op
