@@ -1,0 +1,39 @@
+
+
+  4.0.0
+  com.darkzone
+  DarkzoneBoss
+  1.0.0
+  jar
+  
+    
+      papermc
+      https://repo.papermc.io/repository/maven-public/
+    
+  
+  
+    
+      io.papermc.paper
+      paper-api
+      1.21.1-R0.1-SNAPSHOT
+      provided
+    
+  
+  
+    
+      
+        org.apache.maven.plugins
+        maven-compiler-plugin
+        3.11.0
+        
+          21
+          21
+        
+      
+    
+  
+  
+    21
+    21
+    UTF-8
+  
