@@ -30,48 +30,32 @@ jobs:
 
     - name: Create pom.xml
       run: |
-        cat > pom.xml << 'EOF'
-        
-        
-            4.0.0
-            com.darkzone
-            DarkzoneBoss
-            1.0.0
-            jar
-            
-                
-                    papermc
-                    https://repo.papermc.io/repository/maven-public/
-                
-            
-            
-                
-                    io.papermc.paper
-                    paper-api
-                    1.21.1-R0.1-SNAPSHOT
-                    provided
-                
-            
-            
-                
-                    
-                        org.apache.maven.plugins
-                        maven-compiler-plugin
-                        3.11.0
-                        
-                            21
-                            21
-                        
-                    
-                
-            
-            
-                21
-                21
-                UTF-8
-            
-        
-        EOF
+        cat > pom.xml << 'POMEOF'
+
+
+4.0.0
+com.darkzone
+DarkzoneBoss
+1.0.0
+jar
+
+papermchttps://repo.papermc.io/repository/maven-public/
+
+
+io.papermc.paperpaper-api1.21.1-R0.1-SNAPSHOTprovided
+
+
+
+org.apache.maven.pluginsmaven-compiler-plugin3.11.02121
+
+
+
+21
+21
+UTF-8
+
+
+POMEOF
 
     - name: Build with Maven
       run: mvn clean package
